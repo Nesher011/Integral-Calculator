@@ -104,8 +104,8 @@ class integration {
                     mathString=this.normalizeMathConstant(mathString);
                     outputFormula+="Math."+mathString;
                 }
-                else if(mathString=='x'||mathString=='X'){
-                    if(i==0){
+                else if(mathString==='x'||mathString==='X'){
+                    if(i===0){
                         outputFormula+=mathString;
                     }
                     else if(this.isMathSymbol(outputFormula[outputFormula.length-1])){
@@ -118,7 +118,7 @@ class integration {
                 }
                 i+=mathString.length-1;
             }
-            else if(textFormula[i]=='^')
+            else if(textFormula[i]==='^')
             {
                 outputFormula+="**";
             }
