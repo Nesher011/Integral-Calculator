@@ -1,0 +1,19 @@
+body{
+    padding:0%;
+    margin:0%;
+    border:0px;
+}
+#integrator{
+    text-align: center;
+}
+button{
+    position:absolute;
+    bottom:0px;
+    left:45%;
+    display:table;
+    vertical-align: middle;
+    width:10%;
+    height: 100px;
+    text-align: center;
+    margin:auto;
+}

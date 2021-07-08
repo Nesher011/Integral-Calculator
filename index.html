@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div id="integrator">
+    <br>Formula
+    <br>
+    <input type="text" id="formula" placeholder="x+1" name="Formula" >
+    <br>Lower Bound
+    <br>  
+    <input type="number" id="lowerBound" placeholder="0" name="Lower Bound">
+    <br>Upper Bound
+    <br>
+    <input type="number" id="upperBound" placeholder="4" name="Upper Bound">
+    <br>Number Of Iterations
+    <br>
+    <input type="number" id="numberOfIterations" value="1000" name="Number Of Iterations">
+    <br>
+    <br>
+    <h2 id="integrationResult">0</h2>
+    <button onclick="calculate()">Calculate integral</button>
+    </div>
+    <script src="index.js"></script>    
+</body>
+</html>
