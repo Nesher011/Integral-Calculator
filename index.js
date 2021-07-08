@@ -2,7 +2,7 @@ const mathFunctions=["sqrt","sin","cos","tg","ctg","arcsin","arccos","arctg","ar
 const mathConstants=["pi","e"]
 const mathSymbols=["+","-","*","/","(",")"]
 
-class integration {
+class Integration {
     constructor(){
         this.lowerBound=document.getElementById("lowerBound").value;
         this.upperBound=document.getElementById("upperBound").value;
