@@ -8,7 +8,7 @@ body{
 }
 button{
     position:absolute;
-    bottom:0px;
+    top:40%;
     left:45%;
     display:table;
     vertical-align: middle;
