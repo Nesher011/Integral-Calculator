@@ -50,7 +50,8 @@ class Integration {
     }
     
     isMathFunction(mathString){
-        if(mathFunctions.includes(mathString)){
+        let mathStringCopy=mathString.toLowerCase();
+        if(mathFunctions.includes(mathStringCopy)){
             return true;
         }
         else{
@@ -59,8 +60,8 @@ class Integration {
     }
 
     isMathConstant(mathString){
-        if(mathConstants.includes(mathString)){
-            mathString=mathString.toUpperCase();
+        let mathStringCopy=mathString.toLowerCase();  
+        if(mathConstants.includes(mathStringCopy)){
             return true;
         }
         else{
@@ -80,6 +81,9 @@ class Integration {
     normalizeMathConstant(constantName){
         if(this.isMathConstant(constantName)){
             constantName=constantName.toUpperCase();
+        }
+        else if(this.isMathFunction(constantName)){
+            constantName=constantName.toLowerCase();
         }
         return constantName;
     }
@@ -122,7 +126,7 @@ class Integration {
             {
                 outputFormula+="**";
             }
-            else{
+            else if(this.isMathSymbol){
                 outputFormula+=textFormula[i];
             }
         }
@@ -132,6 +136,6 @@ class Integration {
 }
 
 function calculate(){
-    let myIntegrator= new integration();
+    let myIntegrator= new Integration();
     myIntegrator.calculateIntegral();
 }
